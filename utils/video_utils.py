@@ -1,6 +1,10 @@
 import cv2
+import os
 
 def read_video(video_path):
+    if not os.path.exists(video_path):
+        raise FileNotFoundError(f"Video file not found: {video_path}")
+
     cap = cv2.VideoCapture(video_path)
     frames = []
     while True:

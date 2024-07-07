@@ -1,8 +1,7 @@
 from utils import (read_video, save_video)
 
 def main():
-    input_video_path = "input_files/input_video.mp4"
-    video_frames = read_video(input_video_path)
+    video_frames = read_video("input_files/inputvid.mp4")
 
     save_video(video_frames, "output_videos/output_video.avi")
 
